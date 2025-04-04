@@ -1,0 +1,15 @@
+#addbtn{
+    background-color: #00f0d0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    color: #028fc7;
+}

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg bg-black navbar-dark mb-5 ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Social Media App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#" routerLink="">Home</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Options
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" (click)="onClickHidden()" routerLink="/hidden">View hidden Posts</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center gap-3 text-white" *ngIf="currentUser">
+      <img class="rounded-circle" [src]="currentUser.userImage" alt="">
+      <p>{{currentUser.userName}}</p>
+      <button (click)="logOut()" class="btn btn-danger">Log out</button>
+    </div>
+    <div class="d-flex align-items-center gap-3 text-white" *ngIf="!currentUser">
+      <button class="btn btn-success" routerLink="/login">Login</button>
+    </div>
+  </div>
+</nav>

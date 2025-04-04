@@ -1,0 +1,21 @@
+<div class="rounded-5 text-white bg-black">
+    <div class="d-flex justify-content-between">
+        <app-user-data [post_date]="post.post_date" [userId]="post.userId"/>
+        <div class="d-flex gap-3">
+            <img class="Icon" src="../../../assets/icons/hide-icon.svg" alt="" (click)="hidePost()">
+            <img class="Icon " src="../../../assets/icons/delete-icon.svg" alt="" (click)="deletePost()">
+            <img class="Icon " src="../../../assets/icons/edit-icon.svg" alt="" (click)="editPost(post.id)">
+        </div>
+        
+    </div>
+    
+    <hr>
+    <p class="m-2">{{post.postBody}}</p>
+    <img class="col-12 " [src]="post.postImg" alt="">
+    <button (click)="postLike()" [ngClass]="{'btn-primary':post.liked,'btn-secondary':!post.liked}" class="btn w-100">Like</button>
+    <div class="mb-3">
+        <p>{{comment}}</p>
+        <label for="exampleFormControlTextarea1" class="form-label">Comment</label>
+        <textarea [(ngModel)]="comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+</div>

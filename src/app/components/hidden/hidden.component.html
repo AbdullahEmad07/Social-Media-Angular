@@ -1,0 +1,7 @@
+<div class="container  bg-dark">
+    <button class=" btn btn-danger" (click)="onClickUnhide()">Unhide All</button>
+    <div class="row d-flex justify-content-center gap-5">
+        <app-post *ngFor="let ele of posts"[post]="ele" class="col-8"/>
+    </div>
+    
+</div>

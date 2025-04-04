@@ -1,0 +1,12 @@
+/* img{
+    width: 70px;
+    height: 70px;
+} */
+
+.myImg{
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

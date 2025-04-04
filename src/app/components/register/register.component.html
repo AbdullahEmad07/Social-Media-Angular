@@ -1,0 +1,10 @@
+<div class="w-100 d-flex flex-column align-items-center">
+    <h1>Register</h1>
+    <form action="" class="w-50 gap-2 d-flex flex-column align-items-center" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+        <input class="form-control" type="text" formControlName="userName" placeholder="User Name">
+        <input class="form-control" type="password" formControlName="password" placeholder="Password">
+        <input class="form-control" type="text" formControlName="userImage" placeholder="Image Url">
+        <button class="btn btn-outline-success w-50">Register</button>
+    </form>
+    <button class="btn btn-outline-primary mt-3"routerLink="/login" >Login</button>
+</div>
